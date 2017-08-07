@@ -1,0 +1,390 @@
+html, body {
+    font-size: 12px;
+    line-height: 18px;
+    height: 100%;
+}
+
+body {
+    background: #f9f9f9 url(../img/page-bg-1.jpg);
+}
+
+/*Голубая рамка в Chrome*/
+*:focus {
+    outline: none !important;
+}
+
+/***** Titles and Headings *****/
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Oswald", sans-serif;
+    font-weight: normal;
+    text-transform: uppercase;
+}
+
+h1, h2, h3, h4, h5 {
+    text-shadow: 1px 1px 0 #fdfdfd, 2px 2px 0 rgba(81, 81, 81, 0.5), 0 0 1px #fdfdfd;
+}
+
+.color-bar-1 {
+    width: 100%;
+    background: #414141;
+    height: 5px;
+}
+
+.color-bar-2 {
+    width: 100%;
+    background: #d8450b;
+    height: 3px;
+}
+
+/**************************************
+/ Login form
+**************************************/
+.login-button {
+    font-family: "Oswald", sans-serif;
+    font-weight: normal;
+    color: black;
+    cursor: pointer;
+    background-color: #d8450b;
+    border-color: #d8450b;
+}
+
+.login-button:hover,
+.login-button:focus {
+    background-color: #d8450b;
+    border-color: #d8450b;
+}
+
+/**************************************
+/ Header
+**************************************/
+.logo {
+    margin-top: 40px;
+}
+
+.logo a {
+    color: black;
+    text-decoration: none;
+}
+
+.navigation {
+    margin-top: 40px;
+}
+
+.navigation > ul {
+    float: right;
+    background: #f8f8f8;
+    border-bottom: 1px dotted #a9a9a9;
+    border-top: 1px dotted #a9a9a9;
+}
+
+.navigation > ul > li > a {
+    font-family: "Oswald", sans-serif;
+    font-weight: normal;
+    text-shadow: none;
+    /*text-transform: uppercase;*/
+    font-size: 12px;
+    padding: 10px 15px 10px;
+    color: black;
+    cursor: pointer;
+}
+
+.navigation > ul > li > form > button {
+    font-family: "Oswald", sans-serif;
+    font-weight: normal;
+    text-shadow: none;
+    font-size: 12px;
+    padding: 10px 15px 10px;
+    color: black;
+    border: none;
+}
+
+.navigation > ul > li > form > button:hover,
+.navigation > ul > li > form > button:focus {
+    text-decoration: none;
+    color: black;
+    outline: 1px solid #d8450b;
+    background-color: #d8450b;
+}
+
+.active {
+    background-color: #d8450b;
+}
+
+.active > a {
+    background-color: #d8450b !important;
+}
+
+.navigation > ul > li.active > a,
+.navigation > ul > li.active > a:hover,
+.navigation > ul > li.active > a:focus {
+    color: #FFF;
+    background-color: #d8450b;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+}
+
+.navigation > ul > li > ul > li {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    text-transform: none;
+}
+
+#delete-album:hover,
+.navigation > ul > li > ul > li:hover {
+    background-color: #eee;
+}
+
+/**************************************
+/ Gallery - all albums
+**************************************/
+#album-container {
+    margin-top: 15px;
+}
+
+.album {
+    height: 280px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.album-sort {
+    height: 200px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    cursor: move;
+}
+
+.album-content {
+    width: 100%;
+    height: 75%;
+    max-height: 75%;
+    background-color: lightgrey;
+    position: relative;
+    text-align: center;
+}
+
+.album-content > img {
+    width: 100%;
+    height: 100%;
+}
+
+.album-footer {
+    width: 100%;
+    height: 25%;
+    max-height: 25%;
+    background-color: white;
+}
+
+.album-footer-name {
+    width: 50%;
+    height: 40%;
+    overflow: hidden;
+    padding-top: 5px;
+    padding-left: 10px;
+    display: inline-block;
+}
+
+.album-footer-date {
+    width: 50%;
+    height: 40%;
+    overflow: hidden;
+    padding-top: 5px;
+    padding-right: 10px;
+    float: right;
+    display: inline-block;
+    text-align: right;
+}
+
+.album-footer-name p,
+.album-footer-date p {
+    font-family: Georgia, serif;
+    font-weight: normal;
+    color: black;
+}
+
+.album-footer-name p {
+    font-size: 18px;
+}
+
+.album-footer-date p {
+    font-size: 14px;
+}
+
+.album-footer-description {
+    width: 100%;
+    height: 60%;
+    display: flex;
+    align-items: baseline;
+    overflow: hidden;
+    padding-left: 10px;
+    border-bottom: 1px dotted #a9a9a9;
+}
+
+.album-footer-description p {
+    font-family: Georgia, serif;
+    font-style: italic;
+    font-weight: normal;
+    text-shadow: none;
+    color: #6f6f6f;
+}
+
+.album-view,
+a.album-delete {
+    display: none;
+}
+
+img.album-delete-icon {
+    height: 42px;
+    width: 42px;
+    position: absolute;
+    right: 5px;
+    bottom: 5px;
+    display: block;
+}
+
+img.album-view-icon {
+    height: 42px;
+    width: 42px;
+    position: absolute;
+    right: 47px;
+    bottom: 5px;
+    display: block;
+}
+
+.album-details {
+    height: 42px;
+    width: 42px;
+    position: absolute;
+    right: 47px;
+    bottom: 5px;
+    display: block;
+    border: none;
+    background-image: url("../img/view-album-small.png");
+    background-repeat: no-repeat;
+    background-color: transparent;
+}
+
+.album-details:hover {
+    background-image: url("../img/view-active-small.png");
+}
+
+.album-info {
+    padding: 0;
+}
+
+.album-info li {
+    list-style: none;
+    border-bottom: 1px dashed #a9a9a9;;
+    padding: 8px;
+    text-transform: uppercase;
+}
+
+.album-info li h4 {
+    display: inline;
+    margin-left: 10px;
+    text-transform: none;
+}
+
+.album-info li h5 {
+    display: inline;
+    margin-left: 10px;
+    text-transform: none;
+}
+
+/**************************************
+/ Gallery - images
+**************************************/
+
+#image-container {
+    margin-top: 15px;
+}
+
+.image {
+    cursor: move;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    height: 200px;
+}
+
+.gallery-image {
+    width: 100%;
+    height: 200px;
+}
+
+.delete-gallery-image {
+    height: 42px;
+    width: 42px;
+    position: absolute;
+    right: 15px;
+    bottom: 10px;
+    display: block;
+}
+
+/**************************************
+/ Modal
+**************************************/
+.modal-button:hover,
+.modal-button:focus {
+    color: black;
+    border-color: #d8450b;
+    background-color: #d8450b;
+}
+
+.modal * {
+    font-family: "Oswald", sans-serif;
+    font-weight: normal;
+    text-shadow: none;
+    color: black;
+}
+
+.modal form {
+    display: inline-block;
+}
+
+.modal form#add-album-form,
+.modal form#edit-album-form {
+    display: block;
+}
+
+/**************************************
+/ Pagination
+**************************************/
+.pagination-container {
+    text-align: center;
+}
+
+ul.pagination * {
+    color: black !important;
+}
+
+ul.pagination > li.active > a,
+ul.pagination > li.active > a:hover,
+ul.pagination > li.active > a:focus {
+    background-color: #d8450b !important;
+    border-color: #d8450b !important;
+}
+
+/**************************************
+/ Scroll to top
+**************************************/
+#scroll-to-top {
+    width: 47px;
+    height: 47px;
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000001;
+    border: none;
+    outline: none;
+    background: url("../img/back-top-btn.png");
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+#scroll-to-top:hover {
+    background: url("../img/back-top-btn-active.png");
+}
